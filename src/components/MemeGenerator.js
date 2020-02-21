@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+// import Helmet from 'react-helmet';
 
 import Header from './Header';
 
@@ -41,9 +42,9 @@ class MemeGenerator extends React.Component {
             })
         axios.get('https://corporatebs-generator.sameerkumar.website/')
         // axios.get('https://icanhazdadjoke.com/j/')
-            // .then(response => {
-            //     console.log(response);
-            // })
+            .then(response => {
+                console.log(response);
+            })
     }
 
     handleChange(event) {
@@ -54,7 +55,7 @@ class MemeGenerator extends React.Component {
 
     render() {
         return(
-            <div>
+            <div className="whole-page">
                 <Header meme_url={this.state.meme_url} top_text={this.state.top_text} bottom_text={this.state.bottom_text} handleChange={this.handleChange} handleClick={this.handleClick}/>
             </div>
         )

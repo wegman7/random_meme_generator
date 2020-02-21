@@ -1,41 +1,91 @@
-.app {
-  height: 100vh;
-  background: lightblue;
-}
-
-.tweet {
-  height: 100px;
-  width: 300px;
-  border-radius: 50px;
-  background: white;
-  padding: 20px;
-  margin: 10px;
-}
-
-.navbar {
-  /* color: blue; */
-  background: lightblue;
-}
-
-
 .image { 
-    position: relative;
-    /* width: 50%;
-    height: 50%; */
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
  }
  
  .inside-text-top {
-    color: white;
-    position: absolute; 
-    top: 100px; 
-    left: 200px; 
-    /* width: 100%;  */
+  color: black;
+  position: absolute;
+
+  /* only works if text-align: center is true for parent class */
+  margin-right: auto;
+  margin-left: auto;
+  top: 0%;
+  left: 0;
+  right: 0;
+
+  /* in theory this should work better than the above for centering, but wraps text onto new line too soon and looks awkward */
+  /* top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+
+  font-size: 35px;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-family: Impact;
+  text-transform: uppercase;
  }
 
- .inside-text-bottom {
+.inside-text-bottom {
+  color: black;
+  position: absolute;
+  margin-right: auto;
+  margin-left: auto;
+  top: 65%;
+  left: 0;
+  right: 0;
+  font-size: 35px;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-family: Impact;
+  text-transform: uppercase;
+ }
+
+.row {
+  display: inline;
+}
+
+.center {
    text-align: center;
-   color: white;
-   position: absolute;
-   top: 400px;
-   left: 200px;
+ }
+
+input {
+  background: rgb(190, 190, 190);
+  border-radius: 5px;
+  border: none;
+  margin: 8px;
+  /* transform: translate(-50%, -50%); */
+  padding: 0.8em;
+  
+  color: rgb(108, 118, 255);
+  font-size: 1.1em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  
+  outline: none;
+  box-shadow: 0 4px 6px -5px hsl(0, 0%, 40%), inset 0px 4px 6px -5px black;
+ }
+
+ button {
+  background: rgb(85, 57, 161);
+  border-radius: 20px;
+  border: none;
+  margin: 8px;
+  padding: 10px;
+  
+  color: rgb(108, 118, 255);
+  font-family: monospace;
+  font-size: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  
+  outline: none;
+  /* box-shadow: 0 4px 6px -5px hsl(0, 0%, 40%), inset 0px 4px 6px -5px black; */
+ }
+
+ .whole-page {
+   background-color: rgb(216, 216, 216);
  }
